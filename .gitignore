@@ -1,2 +1,4 @@
 *.pth
+*.ipynb
 .idea
+.ipynb_checkpoints
