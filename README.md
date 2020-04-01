@@ -20,9 +20,11 @@ An open source framework for automatic inpainting task, with the support of [Dee
 
 ### 3) Inference:
 
-- Run `python inference.py`
+- Run `python inference.py --checkpoints ./checkpoints --input ./example/micro.jpg --output ./results`
 
 ## Pretrained Models
+
+Our pretrained models is available at https://drive.google.com/open?id=1agv7jaHJ6HdGgfS4nH6VOAjR2Hfx6-qo
 
 ## License
 

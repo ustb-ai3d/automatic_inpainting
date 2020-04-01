@@ -1,9 +1,8 @@
 import os
-import time
 import numpy as np
 import torch
 from torch.utils.data import DataLoader
-from tensorboardX import SummaryWriter
+from torch.utils.tensorboard import SummaryWriter
 from .dataset import Dataset
 from .models import EdgeModel, InpaintingModel
 from .utils import Progbar, create_dir, stitch_images, imsave
@@ -423,13 +422,11 @@ class EdgeConnect():
         )
 
         index = 0
-        total_time = 0
         total_count = 0
         for items in test_loader:
             
             
             total_count += 1
-            start = time.time()
             
             
             name = self.test_dataset.load_name(index)
@@ -456,7 +453,6 @@ class EdgeConnect():
             path = os.path.join(self.results_path, name)
             print(index, name)
             
-            total_time += time.time() - start
 
             imsave(output, path)
         
@@ -470,7 +466,6 @@ class EdgeConnect():
                 imsave(masked, os.path.join(self.results_path, fname + '_masked.' + fext))
 
         print('\nEnd test....')
-        print(total_time / total_count)
 
     def sample(self, it=None):
         # do not sample when validation set is empty

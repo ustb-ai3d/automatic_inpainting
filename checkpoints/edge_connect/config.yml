@@ -8,17 +8,17 @@ GPU: [0]            # list of gpu ids
 DEBUG: 0            # turns on debugging mode
 VERBOSE: 0          # turns on verbose mode in the output console
 
-TRAIN_FLIST: /data/inpainting_workspace/datasets/dataset_inpaint_256x256_622/train_data.flist
-VAL_FLIST: /data/inpainting_workspace/datasets/dataset_inpaint_256x256_622/val_data.flist
-TEST_FLIST: /data/inpainting_workspace/datasets/dataset_inpaint_256x256_622/test_data.flist
+TRAIN_FLIST: /data/train_data.flist
+VAL_FLIST: /data/val_data.flist
+TEST_FLIST: /data/test_data.flist
 
 TRAIN_EDGE_FLIST: ./datasets/places2_edges_train.flist
 VAL_EDGE_FLIST: ./datasets/places2_edges_val.flist
 TEST_EDGE_FLIST: ./datasets/places2_edges_test.flist
 
-TRAIN_MASK_FLIST: /data/inpainting_workspace/datasets/dataset_inpaint_256x256_622/train_mask.flist
-VAL_MASK_FLIST: /data/inpainting_workspace/datasets/dataset_inpaint_256x256_622/val_mask.flist
-TEST_MASK_FLIST: /data/inpainting_workspace/datasets/dataset_inpaint_256x256_622/test_mask.flist
+TRAIN_MASK_FLIST: /data/train_mask.flist
+VAL_MASK_FLIST: /data/val_mask.flist
+TEST_MASK_FLIST: /data/test_mask.flist
 
 LR: 0.000001                    # learning rate
 D2G_LR: 0.1                   # discriminator/generator learning rate ratio

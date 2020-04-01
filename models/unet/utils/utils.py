@@ -78,3 +78,5 @@ def rle_encode(mask_image):
     runs = np.where(pixels[1:] != pixels[:-1])[0] + 2
     runs[1::2] = runs[1::2] - runs[:-1:2]
     return runs
+
+
